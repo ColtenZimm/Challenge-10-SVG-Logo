@@ -21,3 +21,19 @@ inquirer
       name: 'logoColour',
       message: `Please enter a colour keyword or a hexadecimal number for the logo's background colour`,
     },
+    {
+        type: 'list',
+        name: 'logoShape',
+        message: `Please choose logo shape`,
+        choices: ['triangle', 'circle', 'square'],
+      },
+    ])
+    .then((data) => {
+      const svgPath = './dist/logo.svg';
+      const finalLogo = makeShape(data);
+      //Generate the svg logo here.
+      fs.writeFile(svgPath, generateSvg(finalLogo), (err) =>
+        err ? console.error(err) : console.log('Generated logo.svg')
+      );
+    })
+    .catch((err) => console.error(err));
