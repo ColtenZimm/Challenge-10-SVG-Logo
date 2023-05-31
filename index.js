@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const { generateSvg } = require('./lib/generateSvg');
-const { makeShape } = require('./lib/makeShape');
+const { generateSvg } = require('../lib/generateSvg');
+const { makeShape } = require('../lib/makeShape');
 
 
 inquirer
@@ -13,13 +13,13 @@ inquirer
     },
     {
       type: 'input',
-      name: 'textColour',
-      message: `Please enter text colour keyword or a hexadecimal number for the logo's test color`,
+      name: 'textColor',
+      message: `Please enter text color keyword or a hexadecimal number for the logo's test color`,
     },
     {
       type: 'input',
-      name: 'logoColour',
-      message: `Please enter a colour keyword or a hexadecimal number for the logo's background colour`,
+      name: 'logoColor',
+      message: `Please enter a color keyword or a hexadecimal number for the logo's background color`,
     },
     {
         type: 'list',
