@@ -20,4 +20,19 @@ WHEN I open the `logo.svg` file in a browser
 THEN I am shown a 300x200 pixel image that matches the criteria I entered
 
 ## EXAMPLE
-[label](https://courses.bootcampspot.com/courses/3181/files/2581732/preview)
+const Triangle = require('../lib/triangle');
+describe('Triangle', () => {
+  describe('Render Method', () => {
+    it('should return triangle string', () => {
+      const triangle = new Triangle({
+        logoName: 'Mel',
+        textColour: 'purple',
+        bgColour: '#000',
+        logoShape: 'triangle',
+      });
+      expect(triangle.render()).toBe(
+        `<polygon points="100 0, 0 ,0 50, 100" fill="#000" />`
+      );
+    });
+  });
+});
