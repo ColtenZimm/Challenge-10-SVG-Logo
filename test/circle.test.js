@@ -1,16 +1,15 @@
-const Circle = require('../lib/circle');
+const Circle = require('../Circle.js');
 describe('Circle', () => {
-  describe('Render Method', () => {
-    it('should render circle string', () => {
-      const circle = new Circle({
-        logoName: 'Ted',
-        textColour: 'purple',
-        bgColour: 'red',
-        logoShape: 'circle',
-      });
-      expect(circle.render()).toBe(
-        `<circle cx="50" cy="50" r="50" fill="red" />`
-      );
+    it('should return logo with user choice of shape color, tex, and text color', () => {
+        const circle = new Circle('blue','EKO','white');
+        expect(circle.render()).toEqual(`
+        <svg version="1.1"
+            width="300" height="200"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="150" cy="100" r="100" fill="blue" />
+            <text x="150" y="125" font-size="70" text-anchor="middle" fill="white">EKO</text>
+        </svg>
+        `
+        );
     });
-  });
 });

@@ -1,16 +1,15 @@
-const Square = require('../lib/square');
+const Square = require('../Square.js');
 describe('Square', () => {
-  describe('Render Method', () => {
-    it('should render square string', () => {
-      const square = new Square({
-        logoName: 'Ted',
-        textColour: 'red',
-        bgColour: 'orange',
-        logoShape: 'square',
-      });
-      expect(square.render()).toBe(
-        `<rect width="100" height="100" rx="15" fill="orange" />`
-      );
+    it('should return logo with user choice of shape color, tex, and text color', () => {
+        const square = new Square('red','EKO','yellow');
+        expect(square.render()).toEqual(`
+        <svg version="1.1"
+            width="300" height="200"
+            xmlns="http://www.w3.org/2000/svg">
+            <rect width="200" height="200" fill="red"/>
+            <text x="100" y="125" font-size="70" text-anchor="middle" fill="yellow">EKO</text>
+        </svg>
+        `
+        );
     });
-  });
 });

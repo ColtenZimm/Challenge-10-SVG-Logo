@@ -1,10 +1,10 @@
 {
   "name": "svg-logo-maker",
   "version": "1.0.0",
-  "description": "AS a freelance web developer\r I WANT to generate a simple logo for my projects\r SO THAT I don't have to pay a graphic designer",
+  "description": "",
   "main": "index.js",
   "directories": {
-    "test": "test"
+    "lib": "lib"
   },
   "scripts": {
     "start": "node index.js",
@@ -12,20 +12,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ColtenZimm/Challenge-10-SVG-Logo.git"
+    "url": "git+https://github.com/elizabetholsavsky/SVG-logo-maker.git"
   },
   "keywords": [],
-  "author": "Colten Zimmerman",
-  "license": "MIT",
+  "author": "",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ColtenZimm/svg-logo-maker/issues"
+    "url": "https://github.com/elizabetholsavsky/SVG-logo-maker/issues"
   },
-  "homepage": "https://github.com/ColtenZimm/Challenge-10-SVG-Logo",
+  "homepage": "https://github.com/elizabetholsavsky/SVG-logo-maker#readme",
   "dependencies": {
-    "inquirer": "^8.2.4",
-    "is-css3-color": "^1.0.0"
+    "inquirer": "^8.2.4"
   },
   "devDependencies": {
-    "jest": "^29.4.2"
+    "jest": "^29.5.0"
   }
 }
